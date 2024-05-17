@@ -1,0 +1,301 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --primary-color: #ee19b9; /* Light Mode Primary Color */
+    --btn-bg-color: #ff42ef;
+    --btn-text-color: #333333;
+    --close-btn-color: #333333; /* Light mode close button color */
+}
+
+body.dark-mode {
+    --bg-color: #333333;
+    --text-color: #ffffff;
+    --primary-color: #ee19b9; /* Dark Mode Primary Color */
+    --btn-bg-color: #ff42ef;
+    --btn-text-color: #333333;
+    --close-btn-color: #ffffff; /* Dark mode close button color */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--primary-color);
+}
+
+header .logo {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: nowrap; /* Keep items in a single row */
+    overflow-x: auto; /* Allow horizontal scrolling if necessary */
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    font-size: 16px; /* Adjusted font size */
+}
+
+header nav ul li a i {
+    margin-right: 8px;
+    font-size: 1.9em; /* Adjusted icon size */
+}
+
+header .btn {
+    background-color: var(--btn-bg-color);
+    color: var(--btn-text-color);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+}
+
+header .btn i {
+    font-size: 1.1em; /* Adjusted icon size */
+}
+
+.hero {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.intro {
+     flex: 1 1 50%; /* Ambil setengah lebar pada mode responsif */
+}
+
+.intro h1 {
+    font-size: 36px;
+    color: var(--primary-color);
+}
+
+.intro h2 {
+    font-size: 8px;
+    margin: 10px;
+}
+
+.intro p {
+    font-size: 11px;
+}
+
+.intro p i {
+    margin-right: 8px; /* Margin for the location icon */
+}
+
+.intro .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--btn-bg-color);
+    color: var(--btn-text-color);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.profile-pic {
+    flex: 1 1 50%;
+    text-align: right; /* Posisikan foto profil ke kanan */
+}
+
+.profile-pic img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.detail-item {
+    flex: 1 1 45%;
+    background-color: var(--bg-color);
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.detail-item h3 {
+    font-size: 10px;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.detail-item p {
+    font-size: 8px;
+    line-height: 1.6;
+}
+
+.detail-item ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+detail-item ul li {
+    margin-bottom: 10px;
+    font-size: 1px;
+}
+
+.detail-item .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--btn-bg-color);
+    color: var(--btn-text-color);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.info-section {
+    display: none;
+    padding: 20px;
+    background-color: var(--bg-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.info-section .detail-item {
+    display: none;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--close-btn-color); /* Use variable for close button color */
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 10px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    header {
+        padding: 5px; /* Reduce padding for mobile */
+    }
+
+    header .logo {
+        font-size: 10px; /* Adjust font size */
+    }
+
+    header nav ul {
+        flex-wrap: nowrap; /* Ensure navbar items stay in a single row */
+    }
+
+    header nav ul li {
+        margin-left: 8px; /* Reduce margin between nav items */
+    }
+
+    header nav ul li a {
+        font-size: 8px; /* Adjust font size */
+    }
+
+    header nav ul li a i {
+        font-size: 1em; /* Adjust icon size */
+    }
+
+    header .btn {
+        font-size: 10px; /* Adjust font size */
+        padding: 8px; /* Reduce padding */
+    }
+
+    .intro h1 {
+        font-size: 29px; /* Adjust font size */
+    }
+
+    .intro h2 {
+        font-size: 13px; /* Adjust font size */
+    }
+
+    .intro p {
+        font-size: 12px; /* Adjust font size */
+    }
+
+    .intro .btn {
+        font-size: 12px; /* Adjust font size */
+        padding: 8px 16px; /* Adjust padding */
+    }
+
+    .profile-pic img {
+    max-width: 50%; /* Adjust profile picture size */
+    margin-top: 10px; /* Ensure profile pic does not overlap Instagram button */
+}
+
+.details {
+    flex-direction: column;
+    align-items: center;
+}
+
+.detail-item {
+    flex: 1 1 100%; /* Full width on mobile */
+    font-size: 9px;
+}
+
+.swiper-container {
+    height: 200px; /* Adjust height for better mobile view */
+}
+}
+
